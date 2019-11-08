@@ -1,0 +1,132 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{368EEA15-7F6B-4BDE-865B-A487B475E059}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>SmartDeviceUtilities.ConfigurationManagement</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <OutputFileFolder>\Program Files\SmartDeviceUtilities.ConfigurationManagement</OutputFileFolder>
+    <RootNamespace>SmartDeviceUtilities.ConfigurationManagement</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <NativePlatformName>Windows CE</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
+    <PlatformFamilyName>WindowsCE</PlatformFamilyName>
+    <DeployDirSuffix>$(AssemblyName)</DeployDirSuffix>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>0</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <GenerateSerializationAssemblies>off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>0</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <GenerateSerializationAssemblies>off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib">
+      <Name>MSCorLib</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConfigurationSectionHandlerActivator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConfigurationSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IConfigSectionHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReadOnlyNameValueCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}" xmlns="">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v3.5'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+</Project>
